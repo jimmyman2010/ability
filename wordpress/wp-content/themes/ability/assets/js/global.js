@@ -41,6 +41,30 @@ var DKS = (function(){
             }
             return {width: widthWindow, height: heightWindow};
         },
+        getScrollbarWidth: function() {
+            var outer = document.createElement("div");
+            outer.style.visibility = "hidden";
+            outer.style.width = "100px";
+            outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+            document.body.appendChild(outer);
+
+            var widthNoScroll = outer.offsetWidth;
+            // force scrollbars
+            outer.style.overflow = "scroll";
+
+            // add innerdiv
+            var inner = document.createElement("div");
+            inner.style.width = "100%";
+            outer.appendChild(inner);
+
+            var widthWithScroll = inner.offsetWidth;
+
+            // remove divs
+            outer.parentNode.removeChild(outer);
+
+            return widthNoScroll - widthWithScroll;
+        },
         menuToggle: function() {
             $('.lang_sel_sel, .toggle-main-menu, .panel-grid-cell .widget_nav_menu .widget-title').on('click', function(){
                 $(this).toggleClass('open');
@@ -66,6 +90,16 @@ var DKS = (function(){
                     $(this).hide();
                 });
             }
+        },
+        railMenu: function(){
+            $('.site-rail-menu--toggle').on('click', function(){
+                $('.site-container').toggleClass('site-rail-menu--open');
+            });
+            $('.site-rail-menu--close').on('click', function(){
+                $('.site-container').removeClass('site-rail-menu--open');
+            });
+
+            $('.site-rail-menu .scrolling').mCustomScrollbar();
         },
 
         fullImage: function(){
@@ -120,6 +154,7 @@ var DKS = (function(){
             method.fullImage();
             method.menuToggle();
             method.menuHover();
+            method.railMenu();
             method.historyTab();
             method.backgroundTitle();
         }

@@ -14,6 +14,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
+
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
@@ -23,56 +26,58 @@
 <body <?php body_class(); ?> id="body">
 
 <div id="site-container" class="site-container">
-	<header class="site-header">
 
-		<div class="container clearfix">
-			<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
-			<div class="meta-info">
-				<div class="where-to-buy">
-					<a href="<?= get_option('where_to_buy_link_' . ICL_LANGUAGE_CODE) ?>" class="button button--red"><i class="fa fa-shopping-cart"></i> &nbsp; <?= get_option('where_to_buy_' . ICL_LANGUAGE_CODE) ?></a>
-				</div>
-				<div class="language">
-					<?php do_action('icl_language_selector'); ?>
-				</div>
-			</div>
-		</div>
+	<?php get_sidebar('rightHandRail'); ?>
 
-		<div class="site-menu-wrapper">
 
-			<nav class="site-menu">
-				<div class="container">
-					<a href="javascript:void(0);" class="toggle-main-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-					<div class="main-menu-wrap">
-						<?php
-						if ( has_nav_menu( 'primary' ) ) {
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_class' => 'main-menu',
-								'container' => 'ul'
-							) );
 
-						} ?>
+	<div class="site-wrapper">
+		<header class="site-header">
+			<div class="container clearfix">
+				<a href="/" class="logo"><img src="<?= get_template_directory_uri() ?>/assets/images/logo.png" alt="ABILITY English" title="ABILITY English" /></a>
+
+				<div class="site-menu-wrapper">
+
+					<nav class="site-menu">
+						<div class="main-menu-wrap">
+
+							<?php
+							if ( has_nav_menu( 'primary' ) ) {
+								wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'menu_class' => 'main-menu',
+									'container' => 'ul'
+								) );
+
+							} ?>
+
+						</div>
+					</nav>
+
+
+					<div class="slogan">
+						<div class="connect">
+							<p>
+                                <span class="sn">
+                                    <a target="_blank" href="#" class="sn--tw"><i class="fa fa-twitter"></i></a>
+                                    <a target="_blank" href="#" class="sn--in"><i class="fa fa-instagram"></i></a>
+                                    <a target="_blank" href="#" class="sn--fb"><i class="fa fa-behance"></i></a>
+                                </span>
+							</p>
+						</div>
 					</div>
+
+					<div class="right-rail-menu">
+						<a class="site-rail-menu--toggle" href="javascript:void(0);">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+
 				</div>
-			</nav>
-
-			<?php echo clean_custom_menus('primary'); ?>
-
-		</div>
-
-
-	</header>
-
-	<div class="slogan">
-		<div class="container">
-			<div class="h1"><i class="fa fa-newspaper-o"></i> <span>LATEST NEWS</span></div>
-			<div class="connect">
-				<?= get_option('slogan_' . ICL_LANGUAGE_CODE) ?>
 			</div>
-		</div>
-	</div>
+
+
+		</header>
 
