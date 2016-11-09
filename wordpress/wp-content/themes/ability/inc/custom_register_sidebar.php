@@ -13,9 +13,9 @@ function register_my_sidebars() {
         'name' => __( 'Right Hand Rail Sidebar', 'ability' ),
         'id' => 'right-hand-rail-sidebar',
         'description' => __( 'Widgets in this area will be shown on right hand rail.', 'ability' ),
-        'before_widget' => '<div id="%1$s" class="module %2$s">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="module--title">',
+        'before_title'  => '<h3 class="widget--title">',
         'after_title'   => '</h3>',
     ) );
 }
