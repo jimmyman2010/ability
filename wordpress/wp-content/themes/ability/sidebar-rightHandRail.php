@@ -7,15 +7,17 @@
  */
 ?>
 
-<?php if ( is_active_sidebar( 'right-hand-rail-sidebar' )  ) : ?>
-	<aside class="site-rail-menu" role="complementary">
-		<a class="site-rail-menu--close">Close</a>
+<aside class="site-rail-menu" role="complementary">
+	<a class="site-rail-menu--close">Close</a>
+
+	<?php if ( is_active_sidebar( 'right-hand-rail-sidebar' )  ) : ?>
 		<div class="scrolling">
 
 		<?php dynamic_sidebar( 'right-hand-rail-sidebar' ); ?>
 
 		</div>
-	</aside>
-<?php endif; ?>
+	<?php endif; ?>
+
+</aside>
 
 

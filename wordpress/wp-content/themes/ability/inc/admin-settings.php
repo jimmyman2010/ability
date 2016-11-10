@@ -64,7 +64,7 @@ function register_dickinsons_settings() {
     register_setting( 'dickinsons-settings-footer', 'copyright_vi' );
 
     register_setting( 'dickinsons-settings-footer', 'go_to_top_en' );
-    register_setting( 'dickinsons-settings-footer', 'go_to_top_en_vi' );
+    register_setting( 'dickinsons-settings-footer', 'go_to_top_vi' );
 
     register_setting( 'dickinsons-settings-footer', 'information_en' );
     register_setting( 'dickinsons-settings-footer', 'information_vi' );
