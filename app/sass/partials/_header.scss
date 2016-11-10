@@ -1,6 +1,9 @@
 
 .site-wrapper{
-    padding-top: 139px;
+    padding-top: 119px;
+    @include tablet{
+        padding-top: 139px;
+    }
 }
 
 .site-header{
@@ -21,48 +24,69 @@
 
     .site-header--inner{
         @include transition(margin 0.3s linear);
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+            @include tablet{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
     }
 
     .logo{
         float: left;
-        margin: 0 0 10px;
-        width: 140px;
+        margin: 0 15px 10px;
+        width: 60px;
         @include tablet {
             margin: 0 0 15px;
             width: 166px;
         }
     }
 
+    .site-menu-wrapper{
+        float: right;
+        @include tablet{
+            width: auto;
+            padding-top: 30px;
+        }
+    }
 
     .site-menu{
-        float: left;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 5px);
+        width: 100%;
+        background-color: white;
+        @include tablet{
+            position: static;
+            float: left;
+            width: auto;
+        }
+
         .main-menu-wrap{
         }
 
         .main-menu{
             @include clearfix;
-            padding-right: 10px;
-            border-right: 2px solid #dae0e4;
+            @include tablet{
+                padding-right: 10px;
+                border-right: 2px solid #dae0e4;
+            }
 
             > .menu-item{
-                display: none;
+                float: left;
                 font-weight: 500;
-                border-top: 1px solid rgba(255, 255, 255, 0.2);
-                padding: 0 10px;
                 position: relative;
-                &:first-child{
-                    border-top: none;
-                }
-                @include desktop{
-                    float: left;
-                    display: block;
-                    border-top: none;
-                }
+                padding: 0 10px;
                 > a{
                     position: relative;
-                    display: block;
+                    display: inline-block;
                     color: black;
-                    padding: 0 10px;
+                    padding: 10px;
+                    @include tablet {
+                        padding: 0 10px;
+                    }
 
                     &:hover{
                         text-decoration: none;
@@ -74,26 +98,22 @@
 
                 &:hover {
                     .sub-menu {
-                        @include opacity(1);
-                        height: auto;
+                        display: block;
                     }
                 }
                 .sub-menu{
-                    padding-top: 25px;
-                    font-size: 15px;
-                    @include transition(all 0.3s);
-                    height: 0;
-                    overflow: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
 
-                    @include desktop{
-                        z-index: 1000;
-                        position: absolute;
-                        left: 0;
-                        top: 100%;
-                        @include opacity(0);
-                        background-color: white;
-                        width: 250px;
-                        @include box-shadow(0 6px 13px -5px rgba(0, 0, 0, 0.5));
+                    font-size: 15px;
+                    display: none;
+                    background-color: white;
+                    @include box-shadow(0 6px 13px -5px rgba(0, 0, 0, 0.5));
+                    z-index: 1000;
+                    width: 250px;
+                    @include tablet{
+                        padding-top: 25px;
                     }
 
                     li{
@@ -161,12 +181,6 @@
 
     }
 
-    .site-menu-wrapper{
-        float: right;
-        position: relative;
-        padding-top: 30px;
-    }
-
     .submenu{
         display: none;
         @include box-shadow(0 10px 20px -10px rgba(0, 0, 0, 0.2));
@@ -179,6 +193,10 @@
     }
 
     .slogan{
+        display: none;
+        @include desktop{
+            display: block;
+        }
         float: left;
         padding: 5px 15px 0;
         border-right: 2px solid #dae0e4;

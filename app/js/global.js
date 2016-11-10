@@ -100,6 +100,11 @@ var DKS = (function(){
             });
 
             $('.site-rail-menu .scrolling').mCustomScrollbar();
+
+
+            $(window).on('scroll', function(){
+
+            });
         },
 
         fullImage: function(){
