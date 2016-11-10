@@ -13,9 +13,6 @@
     @include tablet{
         padding-right: 460px;
     }
-    .site-rail-menu{
-        right: 0;
-    }
     .site-wrapper{
         margin-left: -100vw;
         @include tablet{
@@ -25,6 +22,27 @@
             margin-left: 0;
         }
 
+    }
+
+    .site-header{
+        padding-right: 100%;
+        @include tablet{
+            padding-right: 460px;
+        }
+        .site-header--inner{
+            margin-left: -100vw;
+            @include tablet{
+                margin-left: -460px;
+            }
+            @include responsive(1440){
+                margin-left: 0;
+            }
+
+        }
+    }
+
+    .site-rail-menu{
+        right: 0;
     }
 }
 

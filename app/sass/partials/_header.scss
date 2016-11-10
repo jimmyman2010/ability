@@ -1,11 +1,28 @@
 
+.site-wrapper{
+    padding-top: 139px;
+}
+
 .site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8999;
+    background-color: white;
+    width: 100%;
+    @include transition(padding 0.3s linear);
+
     padding-top: 10px;
     border-bottom: 5px solid #06b11a;
     @include tablet{
         padding-top: 15px;
         border-bottom-width: 8px;
     }
+
+    .site-header--inner{
+        @include transition(margin 0.3s linear);
+    }
+
     .logo{
         float: left;
         margin: 0 0 10px;
