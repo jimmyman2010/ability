@@ -320,10 +320,11 @@ require get_template_directory() . '/inc/remove-meta.php';
 
 require get_template_directory() . '/inc/recent-post.php';
 require get_template_directory() . '/inc/post-quotes.php';
-require get_template_directory() . '/inc/post-history.php';
+//require get_template_directory() . '/inc/post-history.php';
 require get_template_directory() . '/inc/admin-settings.php';
 require get_template_directory() . '/inc/random-widget.php';
-require get_template_directory() . '/inc/history-widget.php';
+require get_template_directory() . '/inc/featured-video-widget.php';
+//require get_template_directory() . '/inc/history-widget.php';
 require get_template_directory() . '/inc/custom_wp_nav_menu.php';
 require get_template_directory() . '/inc/custom_register_sidebar.php';
 

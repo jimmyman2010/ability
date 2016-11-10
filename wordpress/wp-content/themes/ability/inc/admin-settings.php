@@ -63,6 +63,9 @@ function register_dickinsons_settings() {
     register_setting( 'dickinsons-settings-footer', 'copyright_en' );
     register_setting( 'dickinsons-settings-footer', 'copyright_vi' );
 
+    register_setting( 'dickinsons-settings-footer', 'go_to_top_en' );
+    register_setting( 'dickinsons-settings-footer', 'go_to_top_en_vi' );
+
     register_setting( 'dickinsons-settings-footer', 'information_en' );
     register_setting( 'dickinsons-settings-footer', 'information_vi' );
 
@@ -261,6 +264,15 @@ function dickinsons_settings_page() {
                     </td>
                     <td>
                         <textarea id="copyright_vi" name="copyright_vi"><?php echo trim( get_option('copyright_vi') ); ?></textarea>
+                    </td>
+                </tr>
+                <tr valign="top" class="copyright">
+                    <th scope="row">Go to Top</th>
+                    <td>
+                        <input type="text" name="go_to_top_en" value="<?php echo trim( get_option('go_to_top_en') ); ?>" />
+                    </td>
+                    <td>
+                        <input type="text" name="go_to_top_vi" value="<?php echo trim( get_option('go_to_top_vi') ); ?>" />
                     </td>
                 </tr>
                 <tr valign="top">

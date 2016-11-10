@@ -126,6 +126,89 @@ var DKS = (function(){
                 }
             });
         },
+
+        playVideo: function(){
+            var interval = setInterval(function(){
+                if(window.YT){
+                    clearInterval(interval);
+
+                    var siteVideo = $('.site-video');
+                    if(siteVideo.length > 0){
+                        siteVideo.each(function(index, element){
+                            var that = $(element),
+                                videoId = that.data('id'),
+                                parent = that.parents('.panel-grid'),
+                                playerOver,
+                                playerBelow;
+                            playerOver = new YT.Player(element, {
+                                height: '390',
+                                width: '640',
+                                videoId: videoId,
+                                playerVars: {
+                                    controls: 0,
+                                    showinfo: 0,
+                                    modestbranding: 1,
+                                    autoplay: 1
+                                },
+                                events: {
+                                    'onReady': function(event){
+
+                                    },
+                                    'onStateChange': function(event){
+                                        if (event.data === YT.PlayerState.PLAYING) {
+                                            playerBelow.playVideo();
+                                        }
+                                        if (event.data === YT.PlayerState.PAUSED) {
+                                            playerBelow.pauseVideo();
+                                        }
+                                        if (event.data === YT.PlayerState.ENDED) {
+                                            playerOver.playVideo();
+                                            playerBelow.playVideo();
+                                        }
+                                    }
+                                }
+                            });
+                            var playerBelowHtml = $('<div class="player-below"></div>');
+                            parent.addClass('panel-grid--site-video').prepend('<div class="overlay"></div>').prepend(playerBelowHtml);
+                            playerBelow = new YT.Player(playerBelowHtml.get(0), {
+                                height: '390',
+                                width: '640',
+                                videoId: videoId,
+                                playerVars: {
+                                    controls: 0,
+                                    showinfo: 0,
+                                    modestbranding: 1,
+                                    autoplay: 1
+                                },
+                                events: {
+                                    'onReady': function(event){
+                                        playerBelow.mute();
+                                    },
+                                    'onStateChange': function(event){
+
+                                    }
+                                }
+                            });
+
+                            $('.site-video--mute-toggle').on('click', function(){
+                                var mute = $(this);
+                                if(mute.hasClass('unmute')){
+                                    mute.removeClass('unmute');
+                                    playerOver.mute();
+                                    mute.children('i').addClass('fa-volume-off').removeClass('fa-volume-up');
+                                } else {
+                                    mute.addClass('unmute');
+                                    playerOver.unMute();
+                                    mute.children('i').removeClass('fa-volume-off').addClass('fa-volume-up');
+                                }
+                            });
+                        });
+                    }
+                }
+            }, 500);
+
+        },
+
         backgroundTitle: function(){
             $('.has-background').each(function(){
                 var src = $(this).find('.wp-post-image').attr('src');
@@ -152,6 +235,7 @@ var DKS = (function(){
         init: function () {
             method.windowWidthHeight();
             method.fullImage();
+            method.playVideo();
             method.menuToggle();
             method.menuHover();
             method.railMenu();
