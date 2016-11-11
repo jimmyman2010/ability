@@ -13,10 +13,10 @@
     z-index: 8999;
     background-color: white;
     width: 100%;
-    @include transition(padding 0.3s linear);
 
     padding-top: 10px;
     border-bottom: 5px solid #06b11a;
+    @include transition(padding 0.3s linear, border 0.3s linear);
     @include tablet{
         padding-top: 15px;
         border-bottom-width: 8px;
@@ -46,6 +46,7 @@
 
     .site-menu-wrapper{
         float: right;
+        @include transition(padding 0.3s linear);
         @include tablet{
             width: auto;
             padding-top: 30px;
@@ -58,10 +59,15 @@
         top: calc(100% + 5px);
         width: 100%;
         background-color: white;
+        @include transition(height 0.3s linear, opacity 0.3s linear);
         @include tablet{
             position: static;
             float: left;
             width: auto;
+
+            height: auto !important;
+            overflow: visible !important;
+            opacity: 1 !important;
         }
 
         .main-menu-wrap{
@@ -83,7 +89,7 @@
                     position: relative;
                     display: inline-block;
                     color: black;
-                    padding: 10px;
+                    padding: 10px 5px;
                     @include tablet {
                         padding: 0 10px;
                     }
@@ -219,7 +225,7 @@
 
     .right-rail-menu{
         float: left;
-        padding: 11px 25px 0;
+        padding: 11px 25px;
         .site-rail-menu--toggle{
             display: block;
             width: 26px;
@@ -238,18 +244,24 @@
 
 }
 
-/*
-.lang-vi{
-    .site-header .site-menu .main-menu {
-        > .menu-item {
-            padding: 6px 0;
-            @include desktop {
-                padding: 12px 5px;
-            }
-        }
-        .blue-label{
-            left: 130px;
+
+.site-scrolling{
+    .site-header{
+        border-bottom-width: 5px;
+    }
+    .logo{
+        @include tablet {
+            width: 80px;
         }
     }
+    .site-menu-wrapper{
+        @include tablet{
+            padding-top: 5px;
+        }
+    }
+    .site-menu {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
 }
-*/

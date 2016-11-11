@@ -31,10 +31,8 @@
 
 	<?php get_sidebar('rightHandRail'); ?>
 
-
-
-	<div class="site-wrapper">
-		<header class="site-header">
+	<header class="site-header">
+		<div class="site-header--inner">
 			<div class="container clearfix">
 				<a href="/" class="logo"><img src="<?= get_template_directory_uri() ?>/assets/images/logo.png" alt="ABILITY English" title="ABILITY English" /></a>
 
@@ -60,11 +58,11 @@
 					<div class="slogan">
 						<div class="connect">
 							<p>
-                                <span class="sn">
-                                    <a target="_blank" href="#" class="sn--tw"><i class="fa fa-twitter"></i></a>
-                                    <a target="_blank" href="#" class="sn--in"><i class="fa fa-instagram"></i></a>
-                                    <a target="_blank" href="#" class="sn--fb"><i class="fa fa-behance"></i></a>
-                                </span>
+									<span class="sn">
+										<a target="_blank" href="#" class="sn--tw"><i class="fa fa-twitter"></i></a>
+										<a target="_blank" href="#" class="sn--in"><i class="fa fa-instagram"></i></a>
+										<a target="_blank" href="#" class="sn--fb"><i class="fa fa-behance"></i></a>
+									</span>
 							</p>
 						</div>
 					</div>
@@ -79,7 +77,10 @@
 
 				</div>
 			</div>
+		</div>
 
+	</header>
 
-		</header>
+	<div class="site-wrapper">
+
 

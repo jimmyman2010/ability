@@ -96,8 +96,8 @@
 				</div>
 				<div class="copyright">
 					<div class="container clearfix">
-						<a href="#body" class="back-to-top anchor"><?= get_option('go_to_top_' . ICL_LANGUAGE_CODE) ?> <i class="fa fa-angle-up"></i></a>
-						<?= get_option('copyright_' . ICL_LANGUAGE_CODE) ?>
+						<a href="#body" class="back-to-top anchor">Go To Top <i class="fa fa-angle-up"></i></a>
+						<p>&copy; 2016 ABILITY English. All Rights Reserved.</p>
 					</div>
 				</div>
 			</section>

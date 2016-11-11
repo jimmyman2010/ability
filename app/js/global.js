@@ -103,7 +103,14 @@ var DKS = (function(){
 
 
             $(window).on('scroll', function(){
-
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+                if(scrollTop > 90) {
+                    $('.site-container').addClass('site-scrolling');
+                }
+                else {
+                    $('.site-container').removeClass('site-scrolling');
+                }
             });
         },
 
