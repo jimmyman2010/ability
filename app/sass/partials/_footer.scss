@@ -110,7 +110,7 @@
             font-weight: 600;
             margin: 0 0 15px;
         }
-        .nav{
+        .menu{
             list-style: disc;
             padding-left: 20px;
             @include clearfix;
@@ -138,9 +138,11 @@
     .information{
         font-size: 15px;
         .contact-info{
-            float: left;
-            width: 33.33%;
             padding: 30px;
+            @include desktop {
+                float: left;
+                width: 33.33%;
+            }
         }
         h3{
             font-size: 23px;
@@ -187,19 +189,5 @@
             float: left;
             padding: 25px 30px;
         }
-    }
-}
-
-
-
-.yellow-template{
-    .bar{
-        background-color: $color-yellow;
-    }
-}
-
-.blue-template{
-    .bar{
-        background-color: $color-blue;
     }
 }

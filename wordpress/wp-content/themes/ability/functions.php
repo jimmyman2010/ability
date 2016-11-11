@@ -80,7 +80,6 @@ function dickinsons_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'dickinsons' ),
-		'sidebar'  => __( 'Blog Sidebar Menu', 'dickinsons' ),
 		'footer'  => __( 'Footer Menu', 'dickinsons' ),
 		'footer_horizontal'  => __( 'Footer Menu (Horizontal)', 'dickinsons' ),
 	) );
@@ -330,7 +329,7 @@ require get_template_directory() . '/inc/custom_register_sidebar.php';
 
 
 /**
- * Disabling WPML�s CSS and JS files
+ * Disabling WPML's CSS and JS files
  */
 define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
 define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);

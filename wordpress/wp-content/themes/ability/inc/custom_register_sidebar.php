@@ -18,4 +18,26 @@ function register_my_sidebars() {
         'before_title'  => '<h3 class="widget--title">',
         'after_title'   => '</h3>',
     ) );
+
+
+    register_sidebar( array(
+        'name' => __( 'Footer Menu', 'ability' ),
+        'id' => 'footer-menu-sidebar',
+        'description' => __( 'Widgets in this area will be shown menu on footer.', 'ability' ),
+        'before_widget' => '<div id="%1$s" class="personal-column %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="personal-column--title">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer Address', 'ability' ),
+        'id' => 'footer-address-sidebar',
+        'description' => __( 'Widgets in this area will be shown address on footer.', 'ability' ),
+        'before_widget' => '<div id="%1$s" class="contact-info %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="contact-info--title">',
+        'after_title'   => '</h3>',
+    ) );
+
 }
