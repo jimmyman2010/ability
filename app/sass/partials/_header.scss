@@ -145,13 +145,13 @@
                     }
                 }
                 .sub-menu--blue-chill a{
-                    color: #119b9b;
+                    color: $color-blue-chill;
                 }
                 .sub-menu--green a{
-                    color: #059816;
+                    color: $color-green;
                 }
                 .sub-menu--orange a{
-                    color: #fdba31;
+                    color: $color-orange;
                 }
             }
             .menu-item-has-children{
@@ -175,13 +175,13 @@
             }
 
             .menu--blue-chill > a span:last-child{
-                color: #119b9b;
+                color: $color-blue-chill;
             }
             .menu--green > a span:last-child{
-                color: #059816;
+                color: $color-green;
             }
             .menu--orange > a span:last-child{
-                color: #fdba31;
+                color: $color-orange;
             }
         }
 

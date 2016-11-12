@@ -152,24 +152,51 @@
 }
 .button{
     display: inline-block;
-    font-family: $font-bold;
+    font-family: $font-roboto;
     outline: none;
     color: #fff !important;
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-    padding: 0 20px;
+    font-size: 22px;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 30px;
     cursor: pointer;
     text-align: center;
-    letter-spacing: 0.04em;
     border: none;
     @include border-radius(50px);
     @include transition(color 0.3s, background-color 0.3s, border-color 0.3s);
     text-decoration: none !important;
     min-width: 145px;
+    background-color: $color-green;
     &:hover{
         @include opacity(0.9);
     }
+}
+
+.button--angle-left{
+    &:before{
+        content:'\f104';
+        font: $font-awesome;
+        font-size: 1.1em;
+        margin-right: 7px;
+        @include tablet {
+            margin-right: 10px;
+        }
+    }
+}
+.button--angle-right{
+    &:before{
+        content:'\f105';
+        font: $font-awesome;
+        font-size: 1.1em;
+        margin-right: 7px;
+        @include tablet {
+            margin-right: 10px;
+        }
+    }
+}
+
+.button--instagram{
+    @include linear-gradient(to right, #da26a9, #b100e3);
 }
 
 .button--icon{
@@ -191,9 +218,10 @@
 }
 
 .button--small{
-    font-size: 11px;
-    height: 25px;
-    line-height: 25px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0 20px;
 }
 
 .button--red{

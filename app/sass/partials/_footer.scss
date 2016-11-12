@@ -1,7 +1,7 @@
 .site-footer{
-    margin-top: 20px;
+    margin-top: 50px;
     @include tablet {
-        margin-top: 30px;
+        margin-top: 70px;
     }
     .bar{
         width: 100%;
@@ -100,9 +100,14 @@
         }
 
         .personal-column{
-            float: left;
-            width: 50%;
-            padding: 35px 30px;
+            padding: 20px 15px;
+            @include tablet{
+                float: left;
+                width: 50%;
+            }
+            @include desktop{
+                padding: 35px 30px;
+            }
         }
 
         h3{
@@ -115,14 +120,16 @@
             padding-left: 20px;
             @include clearfix;
             .menu-item{
-                float: left;
-                width: 50%;
                 margin: 5px 0;
                 &:empty{
                     list-style: none;
                 }
                 &:nth-child(2n+1){
                     clear: left;
+                }
+                @include desktop{
+                    float: left;
+                    width: 50%;
                 }
             }
         }
@@ -138,10 +145,13 @@
     .information{
         font-size: 15px;
         .contact-info{
-            padding: 30px;
-            @include desktop {
+            padding: 15px;
+            @include tablet{
                 float: left;
                 width: 33.33%;
+            }
+            @include desktop {
+                padding: 30px;
             }
         }
         h3{
@@ -174,9 +184,10 @@
         font-size: 13px;
         background-color: #263238;
         color: white;
+        text-align: center;
         .back-to-top{
-            float: right;
-            padding: 25px 20px;
+            display: inline-block;
+            padding: 20px 15px 0;
             color: white;
             i{
                 font-size: 1.5em;
@@ -184,10 +195,23 @@
                 margin-top: -2px;
                 float: right;
             }
+            @include tablet{
+                float: right;
+                padding: 20px 15px;
+            }
+            @include desktop{
+                padding: 25px 20px;
+            }
         }
         p{
-            float: left;
-            padding: 25px 30px;
+            padding: 20px 15px 25px;
+            @include tablet{
+                float: left;
+                padding: 20px 15px;
+            }
+            @include desktop{
+                padding: 25px 30px;
+            }
         }
     }
 }
