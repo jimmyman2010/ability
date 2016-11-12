@@ -259,7 +259,7 @@
         }
     }
 
-    h1, h3, h4, h5, h6{
+    h1, h2, h3, h4, h5, h6{
         font-family: $font-regular;
         font-weight: normal;
     }
@@ -269,8 +269,7 @@
         line-height: 1.2;
     }
     h2{
-        font-family: $font-light;
-        font-size: 38px;
+        font-size: 42px;
         line-height: 1.2;
     }
     h3{
