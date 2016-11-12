@@ -571,8 +571,16 @@
     }
 
     .widget_recent_entries{
+        font-family: $font-open;
+        color: #fff;
+        font-size: 16px;
+        .widget-title{
+            font-size: 23px;
+            font-weight: 600;
+            color: white;
+        }
         li{
-            border-bottom: 1px solid #e7e1cb;
+            border-bottom: 1px solid #AFAFAF;
             margin-bottom: 15px;
             padding-bottom: 15px;
             &:last-child{
@@ -581,12 +589,12 @@
                 padding-bottom: 0;
             }
             a{
-                color: #696056;
+                color: #fff;
             }
             .post-date{
-                color: #7e716b;
+                color: #fff;
                 display: block;
-                font-size: 85%;
+                font-size: 95%;
                 margin-top: 7px;
                 &:before{
                     content: "\f073";
@@ -598,7 +606,7 @@
     }
 
     .panel-widget-style{
-        padding: 15px;
+        padding: 20px;
     }
     .cover{
         padding: 0;
@@ -620,9 +628,7 @@
 
     .video-wrapper {
         position: relative;
-        //padding-bottom: 56.25%; /* 16:9 */
-        padding-bottom: 53.79%;
-        padding-top: 25px;
+        padding-bottom: 56.25%; /* 16:9 */
         height: 0;
 
         .site-video--mute-toggle{
@@ -645,8 +651,46 @@
             height: 100%;
         }
     }
+
+    .cell--headline{
+        .textwidget{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            @include tablet{
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            h1, h2, h3, h4, h5, h6{
+                margin: 0;
+            }
+        }
+    }
 }
 
+.widget_sow-video{
+    .panel-widget-style{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .sow-video-wrapper{
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+}
 
 .panel-grid--site-video{
     position: relative;
