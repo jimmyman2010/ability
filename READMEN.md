@@ -56,3 +56,26 @@ cell--social
 <a href="#"><i class="fa fa-twitter"></i></a>
 <a href="#"><i class="fa fa-instagram"></i></a>
 
+
+
+<div class="clearfix">
+<div class="input-group col">
+<label><span class="label">Your Name</span>
+<div class="input-control">[text* your-name]</div>
+</label>
+</div>
+
+<div class="input-group col col-right">
+<label><span class="label">Nationality</span>
+<div class="input-control">[text* your-nationality]</div>
+</label>
+</div>
+</div>
+
+<div class="input-group">
+<label><span class="label">E-mail</span>
+<div class="input-control">[email* your-email]</div>
+</label>
+</div>
+
+<div class="form--button">[submit "YOUR GOAL + OUR COURSE = AWESOME FUTURE"]</div>

@@ -188,6 +188,7 @@
             color: white;
         }
         .textwidget {
+            color: white;
             .button {
                 margin-top: 15px;
                 color: $color-cardinal !important;
@@ -206,6 +207,7 @@
             color: white;
         }
         .textwidget {
+            color: white;
             .button {
                 margin-top: 15px;
                 color: $color-jaffa !important;
@@ -252,12 +254,6 @@
         bottom: 0;
         padding: 30px 0 !important;
         z-index: 1;
-    }
-
-    .cell--instagram{
-        h1{
-            margin: 0;
-        }
     }
 
     .cell--social{
@@ -428,6 +424,10 @@
         }
 
 
+        .wpcf7{
+            max-width: 700px;
+            margin: 0 auto !important;
+        }
         .wpcf7-not-valid{
             border-color: red;
         }
