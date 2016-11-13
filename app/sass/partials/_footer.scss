@@ -46,7 +46,7 @@
     }
 
     .footer--info{
-        background-color: #e5f3dc;
+        background-color: #fff;
         color: #31363c;
 
 
@@ -59,6 +59,7 @@
             @include tablet{
                 float: left;
                 width: 33.33%;
+
             }
             @include desktop {
                 padding: 30px;
