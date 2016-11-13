@@ -40,4 +40,13 @@ function register_my_sidebars() {
         'after_title'   => '</h3>',
     ) );
 
+    register_sidebar( array(
+        'name' => __( 'Footer CTAs', 'ability' ),
+        'id' => 'footer-ctas-sidebar',
+        'description' => __( 'Widgets in this area will be shown additional footer.', 'ability' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }

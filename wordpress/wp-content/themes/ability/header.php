@@ -58,11 +58,11 @@
 					<div class="slogan">
 						<div class="connect">
 							<p>
-									<span class="sn">
-										<a target="_blank" href="#" class="sn--tw"><i class="fa fa-twitter"></i></a>
-										<a target="_blank" href="#" class="sn--in"><i class="fa fa-instagram"></i></a>
-										<a target="_blank" href="#" class="sn--fb"><i class="fa fa-behance"></i></a>
-									</span>
+								<span class="sn">
+									<a target="_blank" href="https://www.facebook.com/abilityenglish" class="sn--fb"><i class="fa fa-facebook"></i></a>
+									<a target="_blank" href="https://twitter.com/AbilityEnglish" class="sn--tw"><i class="fa fa-twitter"></i></a>
+									<a target="_blank" href="https://www.instagram.com/ability_english/" class="sn--in"><i class="fa fa-instagram"></i></a>
+								</span>
 							</p>
 						</div>
 					</div>
