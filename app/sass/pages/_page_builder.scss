@@ -494,6 +494,23 @@
         }
 
     }
+
+
+    #sb_instagram {
+        .sbi_photo {
+            @include border-radius(10px);
+        }
+        #sbi_load .sbi_load_btn{
+            background-color: $color-green;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            padding: 0 20px;
+
+            @include border-radius(50px);
+        }
+    }
+
 }
 
 .show-mobile{
