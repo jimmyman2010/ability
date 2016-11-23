@@ -561,6 +561,19 @@
         }
     }
 
+    [data-stretch-type="full-stretched"]{
+        .container{
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .sow-slider-base ul.sow-slider-images .sow-slider-image-wrapper{
+        @extend .body
+    }
+
+
 }
 
 .show-mobile{
