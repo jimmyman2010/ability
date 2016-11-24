@@ -174,14 +174,20 @@
                 }
             }
 
-            .menu--blue-chill > a span:last-child{
-                color: $color-blue-chill;
+            .menu--blue-chill > a{
+                &:hover, span:last-child{
+                    color: $color-blue-chill;
+                }
             }
-            .menu--green > a span:last-child{
-                color: $color-green;
+            .menu--green > a{
+                &:hover, span:last-child{
+                    color: $color-green;
+                }
             }
-            .menu--orange > a span:last-child{
-                color: $color-orange;
+            .menu--orange > a{
+                &:hover, span:last-child{
+                    color: $color-orange;
+                }
             }
         }
 

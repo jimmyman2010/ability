@@ -127,6 +127,11 @@
                 padding: 0;
             }
         }
+        &[data-stretch-type="full-stretched"]{
+            .container{
+                max-width: 100%;
+            }
+        }
     }
 
     .siteorigin-widget-tinymce, .textwidget{
@@ -558,14 +563,6 @@
             padding: 0 20px;
 
             @include border-radius(50px);
-        }
-    }
-
-    [data-stretch-type="full-stretched"]{
-        .container{
-            max-width: 100%;
-            padding-left: 0;
-            padding-right: 0;
         }
     }
 
