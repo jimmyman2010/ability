@@ -259,7 +259,7 @@ var DKS = (function(){
         stretchColumn: function(){
             var stretch = $('.siteorigin-panels-stretch');
             $(window).on('load resize', function(){
-                stretch.find('.widget_sow-editor .panel-widget-style').removeAttr('style');
+                stretch.find('.widget_sow-editor .panel-widget-style').height('auto');
                 stretch.each(function(){
                     var panelStyle = $(this).find('.widget_sow-editor .panel-widget-style');
                     var maxHeight = Math.max.apply(null, panelStyle.map(function () {
