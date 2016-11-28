@@ -25,7 +25,6 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
 
-	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body <?php body_class(); ?> id="body">

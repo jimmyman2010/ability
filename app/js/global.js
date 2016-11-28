@@ -140,6 +140,13 @@ var DKS = (function(){
         },
 
         playVideo: function(){
+
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
             var interval = setInterval(function(){
                 if(window.YT){
                     clearInterval(interval);
@@ -270,6 +277,11 @@ var DKS = (function(){
                 });
             });
         },
+        tablePress: function(){
+            $('.tablepress').each(function(){
+                $(this).wrap('<div class="table-responsive"></div>');
+            });
+        },
         init: function () {
             method.windowWidthHeight();
             method.fullImage();
@@ -281,6 +293,7 @@ var DKS = (function(){
             method.backgroundTitle();
             method.contactForm7();
             method.stretchColumn();
+            method.tablePress();
         }
     };
     return {

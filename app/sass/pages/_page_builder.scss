@@ -251,6 +251,24 @@
             padding-left: 20px !important;
         }
     }
+    .cell--blue-chill, .cell--text-white{
+        //background-color: $color-green;
+        .widget-title{
+            padding-top: 20px;
+            color: white;
+        }
+        .textwidget {
+            color: white;
+            .button{
+                margin-top: 15px;
+                color: $color-green !important;
+                background-color: white;
+            }
+        }
+        @include tablet{
+            padding-left: 20px !important;
+        }
+    }
 
     .text--white{
         .textwidget {
@@ -518,6 +536,11 @@
             padding: 30px;
         }
     }
+    .table-responsive{
+        max-width: 100%;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
     .tablepress{
         width: 100%;
         border-collapse: collapse;
@@ -556,6 +579,10 @@
 
 
     #sb_instagram {
+        display: none;
+        @include tablet{
+            display: block;
+        }
         .sbi_photo {
             @include border-radius(10px);
         }
