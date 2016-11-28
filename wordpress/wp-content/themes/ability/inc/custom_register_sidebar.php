@@ -49,4 +49,14 @@ function register_my_sidebars() {
         'before_title'  => '',
         'after_title'   => '',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer CTAs Mini', 'ability' ),
+        'id' => 'footer-ctas-mini-sidebar',
+        'description' => __( 'Widgets in this area will be shown additional footer.', 'ability' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }
