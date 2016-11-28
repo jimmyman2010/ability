@@ -256,6 +256,20 @@ var DKS = (function(){
                     }
                 });
             }
+
+            var yourLanguage = $('#yourLanguage');
+            if(yourLanguage.length > 0){
+                yourLanguage.find('select').on('change', function(){
+                    var value = $(this).val();
+                    if(value === ''){
+                        value = "Default";
+                    }
+                    $('#yourName .label').html(objectLanguage[value][0]);
+                    $('#yourEmail .label').html(objectLanguage[value][1]);
+                    $('#yourMessage .label').html(objectLanguage[value][2]);
+                    $('#buttonSend input').val(objectLanguage[value][3]);
+                });
+            }
         },
         stretchColumn: function(){
             var stretch = $('.siteorigin-panels-stretch');
