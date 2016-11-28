@@ -15,7 +15,7 @@
     width: 100%;
 
     padding-top: 10px;
-    border-bottom: 5px solid #06b11a;
+    border-bottom: 5px solid $color-green;
     @include transition(padding 0.3s linear, border 0.3s linear);
     @include tablet{
         padding-top: 15px;
@@ -144,14 +144,14 @@
                         }
                     }
                 }
-                .sub-menu--blue-chill a{
-                    color: $color-blue-chill;
+                .sub-menu--teal a{
+                    color: $color-teal;
                 }
                 .sub-menu--green a{
                     color: $color-green;
                 }
-                .sub-menu--orange a{
-                    color: $color-orange;
+                .sub-menu--yellow a{
+                    color: $color-yellow;
                 }
             }
             .menu-item-has-children{
@@ -174,9 +174,9 @@
                 }
             }
 
-            .menu--blue-chill > a{
+            .menu--teal > a{
                 &:hover, span:last-child{
-                    color: $color-blue-chill;
+                    color: $color-teal;
                 }
             }
             .menu--green > a{
@@ -184,9 +184,9 @@
                     color: $color-green;
                 }
             }
-            .menu--orange > a{
+            .menu--yellow > a{
                 &:hover, span:last-child{
-                    color: $color-orange;
+                    color: $color-yellow;
                 }
             }
         }

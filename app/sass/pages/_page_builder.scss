@@ -142,8 +142,8 @@
         }
     }
 
-    .cell--blue-chill{
-        background-color: $color-blue-chill;
+    .cell--teal{
+        background-color: $color-teal;
         .widget-title{
             padding-top: 20px;
             color: white;
@@ -152,7 +152,7 @@
             color: white;
             .button{
                 margin-top: 15px;
-                color: $color-blue-chill !important;
+                color: $color-teal !important;
                 background-color: white;
             }
         }
@@ -178,16 +178,16 @@
             padding-left: 20px !important;
         }
     }
-    .cell--orange{
-        background-color: $color-orange;
+    .cell--yellow{
+        background-color: $color-yellow;
         .widget-title{
             padding-top: 20px;
-            color: $color-blue-chill;
+            color: $color-teal;
         }
         .textwidget {
             .button {
                 margin-top: 15px;
-                color: $color-orange !important;
+                color: $color-yellow !important;
                 background-color: white;
             }
         }
@@ -238,7 +238,7 @@
         background-color: $color-sunglow;
         .widget-title{
             padding-top: 20px;
-            color: $color-blue-chill;
+            color: $color-teal;
         }
         .textwidget {
             .button {
@@ -260,6 +260,7 @@
 
     .cell--overlay-top{
         padding: 15px !important;
+        height: auto !important;
         @include tablet {
             position: absolute;
             width: 100%;
@@ -270,6 +271,7 @@
             z-index: 1;
         }
     }
+
     .cell--overlay-bottom{
         position: absolute;
         width: 100%;
@@ -277,6 +279,7 @@
         bottom: 0;
         z-index: 1;
         padding: 15px !important;
+        height: auto !important;
         @include tablet{
             padding: 30px 20px !important;
         }
@@ -574,13 +577,13 @@
 
 }
 
-.show-mobile{
+.show-mobile, .mobile-only{
     display: block;
     @include tablet{
         display: none;
     }
 }
-.hide-mobile{
+.hide-mobile, .desktop-only{
     display: none;
     @include tablet{
         display: block;

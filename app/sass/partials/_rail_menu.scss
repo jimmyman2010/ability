@@ -131,14 +131,14 @@
                     text-decoration: none;
                 }
             }
-            .menu--blue-chill > a{
-                color: #119b9b;
+            .menu--teal > a{
+                color: $color-teal;
             }
             .menu--green > a{
-                color: #059816;
+                color: $color-green;
             }
-            .menu--orange > a{
-                color: #fdba31;
+            .menu--yellow > a{
+                color: $color-yellow;
             }
         }
     }

@@ -222,7 +222,7 @@
 }
 
 .button--yellow{
-    background-color: #efbc00;
+    background-color: $color-yellow;
 }
 
 .button--blue{
@@ -233,12 +233,8 @@
     background-color: #4099FF;
 }
 
-.button--orange{
-    background-color: #EB9F12;
-}
-
 .button--teal{
-    background-color: #18AEB1;
+    background-color: $color-teal;
 }
 
 .button--gray{
@@ -247,7 +243,7 @@
 }
 
 .button--green{
-    background-color: #519721;
+    background-color: $color-green;
 }
 
 .button--light-green{

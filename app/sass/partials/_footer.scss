@@ -1,7 +1,7 @@
 .site-footer{
 
     .personal-network{
-        background-color: #059816;
+        background-color: $color-green;
         font-family: $font-open;
         color: #fff;
         font-size: 15px;
@@ -72,7 +72,7 @@
         h3{
             font-size: 23px;
             margin: 0 0 20px;
-            color: #059816;
+            color: $color-green;
         }
         p{
             margin: 0 0 10px;
@@ -86,7 +86,7 @@
                 font-size: 24px;
                 display: inline-block;
                 margin-left: 30px;
-                color: #059816;
+                color: $color-green;
                 &:first-child {
                     margin-left: 0;
                 }
