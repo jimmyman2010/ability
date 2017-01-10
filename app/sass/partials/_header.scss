@@ -1,7 +1,7 @@
 
 .site-wrapper{
     padding-top: 119px;
-    @include tablet{
+    @include desktop{
         padding-top: 139px;
     }
 }
@@ -40,6 +40,9 @@
         width: 60px;
         @include tablet {
             margin: 0 0 15px;
+            width: 134px;
+        }
+        @include desktop{
             width: 166px;
         }
     }
@@ -49,8 +52,33 @@
         @include transition(padding 0.3s linear);
         @include tablet{
             width: auto;
-            padding-top: 30px;
+            padding-top: 20px;
             padding-bottom: 15px;
+        }
+        @include desktop{
+            padding-top: 30px;
+        }
+    }
+
+    .pay-to-study{
+        position: absolute;
+        top: 15px;
+        right: 70px;
+        width: 100px;
+        padding-right: 20px;
+        border-right: 1px solid;
+        @include tablet {
+            position: static;
+            width: 130px;
+            padding-right: 0;
+            border-right: none;
+
+            float: left;
+            margin-right: 10px;
+        }
+        @include desktop{
+            width: auto;
+            margin-top: -5px;
         }
     }
 

@@ -37,10 +37,13 @@
 	<header class="site-header">
 		<div class="site-header--inner">
 			<div class="container clearfix">
-				<a href="/" class="logo"><img src="<?= get_template_directory_uri() ?>/assets/images/logo.png" alt="ABILITY English" title="ABILITY English" /></a>
+				<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?= get_template_directory_uri() ?>/assets/images/logo.png" alt="ABILITY English" title="ABILITY English" /></a>
 
 				<div class="site-menu-wrapper">
 
+					<a class="pay-to-study" href="<?= esc_url( home_url( 'pay-to-study' ) ); ?>">
+						<img src="<?= get_template_directory_uri() ?>/assets/images/PayToStudy-Button2.png" alt="" />
+					</a>
 					<nav class="site-menu">
 						<div class="main-menu-wrap">
 
