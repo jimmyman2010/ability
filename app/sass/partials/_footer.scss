@@ -94,6 +94,32 @@
         }
     }
 
+    .partners{
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding: 35px 10px 40px;
+        .partner--logo{
+            padding-top: 15px;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 20px;
+            &:first-child{
+                margin-left: 0;
+            }
+            @include tablet{
+                margin-left: 40px;
+            }
+        }
+        img{
+            max-height: 45px;
+            @include tablet{
+                max-height: 60px;
+            }
+        }
+    }
+
     .copyright{
         font-family: $font-open;
         font-size: 13px;

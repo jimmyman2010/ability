@@ -15,11 +15,24 @@
 
 
 			<?php get_sidebar('footerAddress'); ?>
-
+			<div class="partners">
+				<p>Our Language Centre is accredited by following institutions:</p>
+				<div class="partner--logo">
+					<a href="javascript:void(0);">
+						<img src="<?= get_template_directory_uri() ?>/assets/images/AusOnlyAndFuture-Logo.png" alt=""/>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="<?= get_template_directory_uri() ?>/assets/images/EA_logo_web.jpg" alt=""/>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="<?= get_template_directory_uri() ?>/assets/images/ACPET-Logo.jpg" alt=""/>
+					</a>
+				</div>
+			</div>
 			<div class="copyright">
 				<div class="container clearfix">
 					<a href="#body" class="back-to-top anchor">Go To Top <i class="fa fa-angle-up"></i></a>
-					<p>&copy; 2016 ABILITY English. All Rights Reserved.</p>
+					<p>&copy; 2017 ABILITY English. All Rights Reserved. CRICOS Provider Codes: 01530K</p>
 				</div>
 			</div>
 		</footer>

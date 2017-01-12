@@ -336,7 +336,7 @@
 
     .cell--subscribe{
         text-align: center;
-        padding: 30px 10px !important;
+        padding: 30px 5px !important;
         font-size: 18px;
         .widget-title{
             font-size: 32px;
@@ -361,7 +361,7 @@
             width: 100%;
         }
         @include tablet{
-            padding: 40px !important;
+            padding: 40px 0 !important;
             font-size: 22px;
             .widget-title{
                 font-size: 42px;
@@ -377,6 +377,38 @@
     }
 
     .cell--form{
+
+        .mc-field-group{
+            margin-top: 20px;
+            text-align: left;
+            @include tablet{
+                display: inline-block;
+                margin: 0 10px;
+            }
+            input{
+                background-color: white;
+            }
+            input.mce_inline_error{
+                border-color: red !important;
+            }
+            div.mce_inline_error{
+                display: none !important;
+                background: none !important;
+                margin: 5px 0 0 !important;
+                padding: 0 !important;
+                font-size: 13px;
+                font-weight: normal !important;
+                color: red !important;
+            }
+        }
+        .mc-field-group--email{
+            @include tablet{
+                width: 300px;
+            }
+            @include desktop{
+                width: 400px;
+            }
+        }
 
         .widget-title{
             font-size: 42px;
@@ -426,15 +458,15 @@
             color: #5e6977;
             width: 100%;
             line-height: 1;
-            font-size: 18px;
+            font-size: 16px;
             outline: none;
             font-family: $font-roboto !important;
 
             position: relative;
             z-index: 2;
 
-            @include tablet{
-                font-size: 22px;
+            @include desktop{
+                font-size: 18px;
             }
         }
         input, select{
