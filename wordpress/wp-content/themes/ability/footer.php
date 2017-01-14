@@ -18,13 +18,13 @@
 			<div class="partners">
 				<p>Our Language Centre is accredited by following institutions:</p>
 				<div class="partner--logo">
-					<a href="javascript:void(0);">
+					<a target="_blank" href="https://www.austrade.gov.au/Australian/Education/Future-Unlimited">
 						<img src="<?= get_template_directory_uri() ?>/assets/images/AusOnlyAndFuture-Logo.png" alt=""/>
 					</a>
-					<a href="javascript:void(0);">
+					<a target="_blank" href="https://www.englishaustralia.com.au/">
 						<img src="<?= get_template_directory_uri() ?>/assets/images/EA_logo_web.jpg" alt=""/>
 					</a>
-					<a href="javascript:void(0);">
+					<a target="_blank" href="http://www.acpet.edu.au/">
 						<img src="<?= get_template_directory_uri() ?>/assets/images/ACPET-Logo.jpg" alt=""/>
 					</a>
 				</div>
