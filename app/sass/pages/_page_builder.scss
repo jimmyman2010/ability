@@ -392,13 +392,15 @@
                 border-color: red !important;
             }
             div.mce_inline_error{
-                display: none !important;
                 background: none !important;
                 margin: 5px 0 0 !important;
                 padding: 0 !important;
                 font-size: 13px;
                 font-weight: normal !important;
                 color: red !important;
+                @include tablet{
+                    position: absolute;
+                }
             }
         }
         .mc-field-group--email{
@@ -490,7 +492,7 @@
 
         .input-group{
             position: relative;
-            margin-top: 22px;
+            margin-top: 25px;
             label .label{
                 color: #86939e;
                 position: absolute;
@@ -542,15 +544,24 @@
             display: block;
             line-height: 1;
         }
-        .screen-reader-response, .wpcf7-display-none{
+        .wpcf7-response-output{
+            border: none;
+            margin: 0;
+            padding: 50px 0;
             display: none !important;
+        }
+        .wpcf7-mail-sent-ok {
+            display: block !important;
+            ~ .form--content {
+                display: none;
+            }
         }
 
         .wpcf7-not-valid-tip{
             position: absolute;
-            top: 100%;
+            top: calc(100% + 3px);
             left: 0;
-            font-size: 12px;
+            font-size: 13px;
             color: red;
         }
     }
