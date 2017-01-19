@@ -31,7 +31,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-define('VERSION', '1.0.3.3');
+define('VERSION', '1.0.3.02');
 
 if ( ! function_exists( 'dickinsons_setup' ) ) :
 /**
@@ -80,6 +80,7 @@ function dickinsons_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'dickinsons' ),
+		'top'  => __( 'Top Menu', 'dickinsons' ),
 		'footer'  => __( 'Footer Menu', 'dickinsons' ),
 		'footer_horizontal'  => __( 'Footer Menu (Horizontal)', 'dickinsons' ),
 	) );

@@ -1,11 +1,12 @@
 .site-container{
-    @include transition(padding 0.3s linear);
+    @include transition(padding 0.2s linear);
     overflow: hidden;
     position: relative;
     max-width: 100vw;
+    padding-right: 0;
 }
 .site-wrapper{
-    @include transition(margin 0.3s linear);
+    @include transition(margin 0.2s linear);
 }
 
 .site-rail-menu--open{
@@ -58,7 +59,7 @@
     top: 0;
     z-index: 9000;
 
-    @include transition(right 0.3s linear);
+    @include transition(right 0.2s linear);
 
     @include tablet{
         padding: 60px 36px 36px 60px;

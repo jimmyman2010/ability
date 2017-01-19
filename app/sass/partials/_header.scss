@@ -1,6 +1,7 @@
 
 .site-wrapper{
     padding-top: 119px;
+    @include transition(padding 0.2s linear);
     @include desktop{
         padding-top: 139px;
     }
@@ -13,17 +14,11 @@
     z-index: 8999;
     background-color: white;
     width: 100%;
-
-    padding-top: 10px;
-    border-bottom: 5px solid $color-green;
-    @include transition(padding 0.3s linear, border 0.3s linear);
-    @include tablet{
-        padding-top: 15px;
-        border-bottom-width: 8px;
-    }
+    padding-right: 0;
+    @include transition(padding 0.2s linear);
 
     .site-header--inner{
-        @include transition(margin 0.3s linear);
+        @include transition(margin 0.2s linear);
         .container{
             padding-left: 0;
             padding-right: 0;
@@ -31,6 +26,48 @@
                 padding-left: 15px;
                 padding-right: 15px;
             }
+        }
+    }
+
+    .top-header{
+        display: none;
+        overflow: hidden;
+        margin-top: -32px;
+        height: 32px;
+        @include transition(margin 0.2s linear);
+        font-size: 14px;
+        text-align: right;
+        background-color: #FFCE00;
+        font-weight: 500;
+        @include desktop{
+            display: block;
+        }
+
+        a{
+            color: #574000;
+            text-decoration: none;
+        }
+        ul{
+            padding: 8px 0;
+        }
+        li{
+            display: inline-block;
+            padding: 0 13px 0 10px;
+            border-right: 1px solid #574000;
+            &:last-child{
+                border-right: none;
+                padding-right: 25px;
+            }
+        }
+    }
+
+    .main-header{
+        padding-top: 10px;
+        border-bottom: 5px solid $color-green;
+        @include transition(padding 0.2s linear, border 0.2s linear);
+        @include tablet{
+            padding-top: 15px;
+            border-bottom-width: 8px;
         }
     }
 
@@ -49,7 +86,7 @@
 
     .site-menu-wrapper{
         float: right;
-        @include transition(padding 0.3s linear);
+        @include transition(padding 0.2s linear);
         @include tablet{
             width: auto;
             padding-top: 20px;
@@ -88,7 +125,7 @@
         top: calc(100% + 5px);
         width: 100%;
         background-color: white;
-        @include transition(height 0.3s linear, opacity 0.3s linear);
+        @include transition(height 0.2s linear, opacity 0.2s linear);
         @include tablet{
             position: static;
             float: left;
@@ -279,9 +316,23 @@
 
 }
 
+.has--top-header{
+    .site-wrapper{
+        @include desktop{
+            padding-top: 171px;
+        }
+    }
+    .top-header{
+        margin-top: 0;
+    }
+}
+
 
 .site-scrolling{
-    .site-header{
+    .top-header{
+        margin-top: -32px;
+    }
+    .main-header{
         border-bottom-width: 5px;
     }
     .logo{
@@ -298,5 +349,10 @@
         height: 0;
         overflow: hidden;
         opacity: 0;
+    }
+    .site-wrapper{
+        @include tablet{
+            padding-top: 85px;
+        }
     }
 }
