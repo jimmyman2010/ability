@@ -42,7 +42,9 @@
         @include desktop{
             display: block;
         }
-
+        .container{
+            padding-right: 0;
+        }
         a{
             color: #574000;
             text-decoration: none;
@@ -56,7 +58,7 @@
             border-right: 1px solid #574000;
             &:last-child{
                 border-right: none;
-                padding-right: 25px;
+                padding-right: 0;
             }
         }
     }
