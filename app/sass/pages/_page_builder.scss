@@ -472,10 +472,10 @@
             }
         }
         input, select{
-            height: 42px;
+            height: 40px;
             padding: 0 15px;
             @include tablet{
-                height: 52px;
+                height: 48px;
             }
         }
         textarea{
@@ -497,10 +497,10 @@
                 color: #86939e;
                 position: absolute;
                 left: 18px;
-                top: 10px;
+                top: 9px;
                 z-index: 1;
                 @include tablet{
-                    top: 14px;
+                    top: 11px;
                 }
             }
 
