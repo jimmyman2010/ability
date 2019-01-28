@@ -6,20 +6,14 @@
         "gulp-compass": "*",
         "gulp-rename": "*",
         "gulp-cssnano": "*",
-        "gulp-useref" : "*",
+        "gulp-useref": "*",
         "gulp-if": "*",
         "gulp-uglify": "*",
-
         "gulp-imagemin": "*",
-
         "gulp-svgmin": "*",
-
-        "normalize-scss" : "*",
-
-        "gulp-fontmin" : "*",
-
+        "normalize-scss": "*",
+        "gulp-fontmin": "*",
         "gulp-rimraf": "*",
-
         "gulp-html-tag-include": "*",
         "imagemin-gifsicle": "*",
         "imagemin-jpegtran": "*",
